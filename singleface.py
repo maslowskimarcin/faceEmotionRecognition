@@ -147,7 +147,7 @@ else:
         # find the emotion with maximum probability and display it
         maxindex = np.argmax(result[0])
         font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(frame, EMOTIONS[maxindex], (10, 360), font, 2, (255, 255, 255), 2, cv2.LINE_AA)
+        cv2.putText(frame, EMOTIONS[maxindex], (10, 360), font,2, (0, 0,0), 3, cv2.LINE_AA)
         face_image = feelings_faces[maxindex]
         print(face_image[:, :, 3])
 
@@ -157,9 +157,7 @@ else:
             # in most cases it is 0, so, we assign the roi to the emoji
             # you could also do:
             # frame[200:320,10:130,c] = frame[200:320, 10:130, c] * (1.0 - face_image[:, :, 3] / 255.0)
-            #frame[200:320, 10:130, c] = face_image[:, :, c] * (face_image[:, :, 3] / 255.0) + frame[200:320, 10:130,
-                                                                                              c] * (
-                                               # 1.0 - face_image[:, :, 3] / 255.0)
+            frame[200:320, 10:130, c] = face_image[:, :, c] * (face_image[:, :, 3] / 255.0) + frame[200:320, 10:130,c] * (1.0 - face_image[:, :, 3] / 255.0)
 
     if not len(faces) > 0:
         # do nothing if no face is detected
