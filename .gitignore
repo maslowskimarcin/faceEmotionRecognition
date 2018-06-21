@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+Data.tar.gz
+Data/Data/model_1_atul.tflearn.data-00000-of-00001
+Data/Data/model_1_atul.tflearn.index
+Data/Data/model_1_atul.tflearn.meta
+model_1_atul.tflearn.data-00000-of-00001
+model_1_atul.tflearn.index
+model_1_atul.tflearn.meta
